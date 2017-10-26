@@ -55,3 +55,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'pg'
 end
+
+gem 'rakuten_web_service' , '1.5.0' # 楽天公式 Ruby用ライブラリ
+gem 'dotenv-rails' #環境変数を簡単に扱う
