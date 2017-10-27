@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
-  get 'logout', to: 'sessions#destroy'
+  delete 'logout', to: 'sessions#destroy'
   
   
   get 'signup', to: 'users#new'
@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   
   resources :items, only: [:new, :show]
   resources :ownerships, only: [:create, :destroy]
+  
+  get 'rankings/want', to: 'rankings#want'
+  get 'rankings/have', to: 'rankings#have'
 end
